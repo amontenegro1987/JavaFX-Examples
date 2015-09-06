@@ -5,9 +5,7 @@ import javafx.stage.Stage;
 
 import java.util.function.Consumer;
 
-/**
- * Created by hendrikebbers on 12.03.15.
- */
+
 public class SimpleApplicationStarter extends Application {
 
     private static Consumer<Stage> starter;

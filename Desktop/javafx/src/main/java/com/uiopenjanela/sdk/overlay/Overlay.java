@@ -37,10 +37,10 @@ public class Overlay extends Region {
     public Overlay() {
         getStyleClass().add("overlay");
 
-        titleLabel = new Label("Beschreibung");
+        titleLabel = new Label("OpenJanela CRM");
         titleLabel.getStyleClass().addAll("overlay-content", "overlay-title");
 
-        descriptionLabel = new Label("Ich bin die Beschreibung des aktuell angezeigten Datensatzes. Ich kann schon mal länger sein als so ein langweiliger Titel. Daher muss ich natürlich vernünftig umbrechen.");
+        descriptionLabel = new Label("H.O. Address: 101 - 4915 S. Drexel Ave. Chicago, Illinois. USA, 60615");
         descriptionLabel.getStyleClass().addAll("overlay-content", "overlay-description");
         descriptionLabel.setWrapText(true);
 

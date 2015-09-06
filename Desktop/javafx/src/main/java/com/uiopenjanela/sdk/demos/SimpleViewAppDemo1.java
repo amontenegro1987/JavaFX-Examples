@@ -22,18 +22,18 @@ public class SimpleViewAppDemo1 {
     public static void main(String... args) {
 
         Application app = new Application();
-        app.setTitle("MyApp");
-        app.setBaseColor(Color.DARKORCHID);
-        app.addToolbarItem(new Action(Icon.VOLUMNE_DOWN, () -> app.animateToolbarToLargeVersion()));
-        app.addToolbarItem(new Action(Icon.VOLUMNE_UP, () -> app.animateToolbarToSmallVersion()));
+        app.setTitle("OpenJanela App");
+        app.setBaseColor(Color.GREEN);
+        app.addToolbarItem(new Action(Icon.ANGLE_LEFT, () -> app.animateToolbarToLargeVersion()));
+        app.addToolbarItem(new Action(Icon.ANGLE_RIGHT, () -> app.animateToolbarToSmallVersion()));
 
         app.setToolbarBackgroundImage(SimpleViewAppDemo1.class.getResource("toolbar-background.png").toExternalForm());
-
+        app.addMenuEntry(new Action(Icon.COGS, "Users", () -> showPersonList(app)));
         app.addMenuEntry(new Action(Icon.CALENDAR, "Google Calendar", () -> showPersonList(app)));
-        app.addMenuEntry(new Action(Icon.COGS, "System Settings", () -> showForm(app)));
-        app.addMenuEntry(new Action(Icon.MAIL, "Mail", () -> showImage(app)));
+        app.addMenuEntry(new Action(Icon.COGS, "System Settings", () -> showImage(app)));
+        app.addMenuEntry(new Action(Icon.MAIL, "Form", () -> showForm(app)));
 
-        app.setMediaAsMenuHeader(new DefaultMedia("User4711", "Ich bin eine Beschreibung.", SimpleViewAppDemo1.class.getResource("user-13.jpg").toExternalForm()));
+        app.setMediaAsMenuHeader(new DefaultMedia("amontenegro", "Administrator.", SimpleViewAppDemo1.class.getResource("user-13.jpg").toExternalForm()));
 
         app.setMenuFooter(new Action(Icon.COGS, "Configure"));
 
@@ -45,7 +45,7 @@ public class SimpleViewAppDemo1 {
     private static void showForm(Application app) {
         FormLayout formLayout = new FormLayout();
 
-        formLayout.addHeader("Ich bin eine Form");
+        formLayout.addHeader("Application Form");
         formLayout.addField("Name");
         formLayout.addField("Description", EditorType.TEXTAREA);
 
@@ -54,7 +54,7 @@ public class SimpleViewAppDemo1 {
         formLayout.addField("Gender", EditorType.COMBOBOX);
         formLayout.addField("Age");
 
-        formLayout.addHeader("Adresse", "Bitte die Mail-Adresse angeben.");
+        formLayout.addHeader("Address", "Please write your E-mail Address");
         formLayout.addField("Mail");
         formLayout.addField("Mail2");
         formLayout.addField("Phone");
@@ -94,19 +94,8 @@ public class SimpleViewAppDemo1 {
 
         MediaList<Media> list = new MediaList<>();
 
-        list.getItems().add(new DefaultMedia("Test01", "Ich bin eine Beschreibung", SimpleViewAppDemo1.class.getResource("user-01.jpg").toExternalForm()));
-        list.getItems().add(new DefaultMedia("Test02", "Ich bin eine Beschreibung", SimpleViewAppDemo1.class.getResource("user-02.jpg").toExternalForm()));
-        list.getItems().add(new DefaultMedia("Test03", "Ich bin eine Beschreibung", SimpleViewAppDemo1.class.getResource("user-03.jpg").toExternalForm()));
-        list.getItems().add(new DefaultMedia("Test04", "Ich bin eine Beschreibung", SimpleViewAppDemo1.class.getResource("user-04.jpg").toExternalForm()));
-        list.getItems().add(new DefaultMedia("Test05", "Ich bin eine Beschreibung", SimpleViewAppDemo1.class.getResource("user-05.jpg").toExternalForm()));
-        list.getItems().add(new DefaultMedia("Test06", "Ich bin eine Beschreibung", SimpleViewAppDemo1.class.getResource("user-06.jpg").toExternalForm()));
-        list.getItems().add(new DefaultMedia("Test07", "Ich bin eine Beschreibung", SimpleViewAppDemo1.class.getResource("user-07.jpg").toExternalForm()));
-        list.getItems().add(new DefaultMedia("Test08", "Ich bin eine Beschreibung", SimpleViewAppDemo1.class.getResource("user-08.jpg").toExternalForm()));
-        list.getItems().add(new DefaultMedia("Test09", "Ich bin eine Beschreibung", SimpleViewAppDemo1.class.getResource("user-09.jpg").toExternalForm()));
-        list.getItems().add(new DefaultMedia("Test10", "Ich bin eine Beschreibung", SimpleViewAppDemo1.class.getResource("user-10.jpg").toExternalForm()));
-        list.getItems().add(new DefaultMedia("Test11", "Ich bin eine Beschreibung", SimpleViewAppDemo1.class.getResource("user-11.jpg").toExternalForm()));
-        list.getItems().add(new DefaultMedia("Test12", "Ich bin eine Beschreibung", SimpleViewAppDemo1.class.getResource("user-12.jpg").toExternalForm()));
-        list.getItems().add(new DefaultMedia("Test13", "Ich bin eine Beschreibung", SimpleViewAppDemo1.class.getResource("user-13.jpg").toExternalForm()));
+        list.getItems().add(new DefaultMedia("emontenegro", "Administrator/Offline", SimpleViewAppDemo1.class.getResource("user-01.jpg").toExternalForm()));
+        list.getItems().add(new DefaultMedia("Sherif", "Administrator/Offline", SimpleViewAppDemo1.class.getResource("user-02.jpg").toExternalForm()));
 
         view.setCenterNode(list);
 
@@ -118,18 +107,16 @@ public class SimpleViewAppDemo1 {
         app.setWorkbench(view);
 
         app.clearGlobalActions();
-        app.addGlobalAction(new Action(Icon.VOLUMNE_DOWN));
-        app.addGlobalAction(new Action(Icon.VOLUMNE_UP));
+        app.addGlobalAction(new Action(Icon.ANGLE_LEFT));
+        app.addGlobalAction(new Action(Icon.ANGLE_RIGHT));
     }
 
     private static ChatTimeline<DefaultChatMessage> createChatTimeline() {
         ChatTimeline<DefaultChatMessage> timeline = new ChatTimeline<>();
         timeline.getItems().add(new DefaultChatMessage(true, "Hello"));
-        timeline.getItems().add(new DefaultChatMessage(false, "How are you"));
-        timeline.getItems().add(new DefaultChatMessage(true, "Fine, thanks. Do you want to go to the cinema today?"));
-        timeline.getItems().add(new DefaultChatMessage(true, "Or having some drinks?"));
-        timeline.getItems().add(new DefaultChatMessage(false, "Oh no, I already have a date this evening with Steve. We want to go to a club. If you want you can come with us."));
-        timeline.getItems().add(new DefaultChatMessage(true, "Cool, when do you want to start?"));
+        timeline.getItems().add(new DefaultChatMessage(false, "This is a test"));
+        timeline.getItems().add(new DefaultChatMessage(true, "for using JavaFX for OpenJanela"));
+
         return timeline;
     }
 }

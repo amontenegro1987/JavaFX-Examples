@@ -8,9 +8,7 @@ import javafx.scene.Node;
 import javafx.scene.layout.Region;
 import javafx.scene.shape.Line;
 
-/**
- * Created by hendrikebbers on 12.03.15.
- */
+
 public class BaseContainer extends Region {
 
     private ObjectProperty<ContainerToolbar> toolbar;

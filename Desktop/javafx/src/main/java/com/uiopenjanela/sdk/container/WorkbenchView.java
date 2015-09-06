@@ -5,9 +5,7 @@ import javafx.beans.property.SimpleObjectProperty;
 import javafx.scene.Node;
 import javafx.scene.layout.Region;
 
-/**
- * Created by hendrikebbers on 12.03.15.
- */
+
 public class WorkbenchView extends Region {
 
     private ObjectProperty<Node> centerNode;

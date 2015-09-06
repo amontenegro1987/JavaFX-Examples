@@ -7,9 +7,7 @@ import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-/**
- * Created by hendrikebbers on 12.03.15.
- */
+
 public class Action {
 
     private StringProperty title;

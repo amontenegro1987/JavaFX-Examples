@@ -2,9 +2,7 @@ package com.uiopenjanela.sdk.container;
 
 import com.uiopenjanela.sdk.toolbar.BaseToolbar;
 
-/**
- * Created by hendrikebbers on 12.03.15.
- */
+
 public class ContainerToolbar extends BaseToolbar {
 
     public ContainerToolbar() {

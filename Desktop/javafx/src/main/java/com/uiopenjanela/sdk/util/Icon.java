@@ -1,8 +1,6 @@
 package com.uiopenjanela.sdk.util;
 
-/**
- * Created by hendrikebbers on 12.03.15.
- */
+
 public enum Icon {
     VOLUMNE_UP("\uf028"), VOLUMNE_DOWN("\uf027"), ANGLE_LEFT("\uf104"), ANGLE_RIGHT("\uf105"), NAV("\uf0c9"), COGS("\uf085"), MAIL("\uf003"), CALENDAR("\uf073"), PHONE("\uf095");
 

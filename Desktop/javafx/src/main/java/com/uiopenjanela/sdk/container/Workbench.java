@@ -5,9 +5,7 @@ import javafx.beans.property.SimpleObjectProperty;
 import javafx.scene.Node;
 import javafx.scene.layout.StackPane;
 
-/**
- * Created by hendrikebbers on 12.03.15.
- */
+
 public class Workbench extends StackPane {
 
     private ObjectProperty<Node> currentView;

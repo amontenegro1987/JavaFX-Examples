@@ -7,9 +7,7 @@ import javafx.beans.property.SimpleBooleanProperty;
 import javafx.css.PseudoClass;
 import javafx.scene.control.Button;
 
-/**
- * Created by hendrikebbers on 12.03.15.
- */
+
 public class ApplicationToolbar extends BaseToolbar {
 
     private Button menuButton;

@@ -27,9 +27,7 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-/**
- * Created by hendrikebbers on 12.03.15.
- */
+
 public class Application extends VBox {
 
     private ObservableList<String> stylesheets;
